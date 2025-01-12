@@ -8,8 +8,8 @@ on:
 jobs:
   maestro_test: # job_1
     runs-on: macos-latest
+    timeout-minutes: 10
 
-    # 👉 steps for job_1
     steps:
     # Maestroのセットアップ
       - name: Install dependencies and Maestro
