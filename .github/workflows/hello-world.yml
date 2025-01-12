@@ -14,11 +14,11 @@ jobs:
     # Maestroのセットアップ
       - name: Install dependencies and Maestro
         run: |
-        export MAESTRO_VERSION=1.39.7
-        curl -Ls “https://get.maestro.mobile.dev" | zsh
-        arch -arm64 brew tap facebook/fb
-        arch -arm64 brew install facebook/fb/idb-companion
-        arch -arm64 brew install jq
+          export MAESTRO_VERSION=1.39.7
+          curl -Ls “https://get.maestro.mobile.dev" | zsh
+          arch -arm64 brew tap facebook/fb
+          arch -arm64 brew install facebook/fb/idb-companion
+          arch -arm64 brew install jq
 
     # Javaのセットアップ
       - name: Set up JDK 11
