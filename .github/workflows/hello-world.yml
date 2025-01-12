@@ -11,5 +11,13 @@ on:
 
 # 2. Workflow
 jobs:
+  hello_world: # job_1
+    runs-on: macos-latest
 
-  # (...)
+    # 👉 steps for job_1
+    steps:
+      - name: Hello World!
+        run: echo "hello world."
+
+      - name: Today's Date!
+        run: date
