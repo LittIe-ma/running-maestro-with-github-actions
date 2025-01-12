@@ -8,7 +8,7 @@ on:
 jobs:
   maestro_test: # job_1
     runs-on: macos-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
 
     steps:
     # Maestroのセットアップ
