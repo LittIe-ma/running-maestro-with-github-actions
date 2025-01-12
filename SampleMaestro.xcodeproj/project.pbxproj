@@ -11,6 +11,7 @@
 		F367BAA42D3388E200948EA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367BAA32D3388E200948EA5 /* ContentView.swift */; };
 		F367BAA62D3388E300948EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F367BAA52D3388E300948EA5 /* Assets.xcassets */; };
 		F367BAA92D3388E300948EA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F367BAA82D3388E300948EA5 /* Preview Assets.xcassets */; };
+		F367BABE2D338B8500948EA5 /* Test.yaml in Resources */ = {isa = PBXBuildFile; fileRef = F367BABD2D338B8500948EA5 /* Test.yaml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F367BAA32D3388E200948EA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F367BAA52D3388E300948EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F367BAA82D3388E300948EA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F367BABD2D338B8500948EA5 /* Test.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = Test.yaml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 		F367BA952D3388E200948EA5 = {
 			isa = PBXGroup;
 			children = (
+				F367BABC2D338B5F00948EA5 /* .maestro */,
 				F367BAA02D3388E200948EA5 /* SampleMaestro */,
 				F367BA9F2D3388E200948EA5 /* Products */,
 			);
@@ -66,6 +69,14 @@
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
+		};
+		F367BABC2D338B5F00948EA5 /* .maestro */ = {
+			isa = PBXGroup;
+			children = (
+				F367BABD2D338B8500948EA5 /* Test.yaml */,
+			);
+			path = .maestro;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -125,6 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F367BABE2D338B8500948EA5 /* Test.yaml in Resources */,
 				F367BAA92D3388E300948EA5 /* Preview Assets.xcassets in Resources */,
 				F367BAA62D3388E300948EA5 /* Assets.xcassets in Resources */,
 			);
