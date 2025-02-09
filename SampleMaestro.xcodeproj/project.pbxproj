@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F31D62332D58A72E0081BD51 /* hello-world.yml in Resources */ = {isa = PBXBuildFile; fileRef = F31D62312D58A72E0081BD51 /* hello-world.yml */; };
 		F367BAA22D3388E200948EA5 /* SampleMaestroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367BAA12D3388E200948EA5 /* SampleMaestroApp.swift */; };
 		F367BAA42D3388E200948EA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F367BAA32D3388E200948EA5 /* ContentView.swift */; };
 		F367BAA62D3388E300948EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F367BAA52D3388E300948EA5 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F31D62312D58A72E0081BD51 /* hello-world.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "hello-world.yml"; sourceTree = "<group>"; };
 		F367BA9E2D3388E200948EA5 /* SampleMaestro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleMaestro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F367BAA12D3388E200948EA5 /* SampleMaestroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMaestroApp.swift; sourceTree = "<group>"; };
 		F367BAA32D3388E200948EA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,9 +36,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F31D62322D58A72E0081BD51 /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				F31D62312D58A72E0081BD51 /* hello-world.yml */,
+			);
+			name = workflows;
+			path = .github/workflows;
+			sourceTree = "<group>";
+		};
 		F367BA952D3388E200948EA5 = {
 			isa = PBXGroup;
 			children = (
+				F31D62322D58A72E0081BD51 /* workflows */,
 				F367BABC2D338B5F00948EA5 /* .maestro */,
 				F367BAA02D3388E200948EA5 /* SampleMaestro */,
 				F367BA9F2D3388E200948EA5 /* Products */,
@@ -136,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31D62332D58A72E0081BD51 /* hello-world.yml in Resources */,
 				F367BABE2D338B8500948EA5 /* Test.yaml in Resources */,
 				F367BAA92D3388E300948EA5 /* Preview Assets.xcassets in Resources */,
 				F367BAA62D3388E300948EA5 /* Assets.xcassets in Resources */,
