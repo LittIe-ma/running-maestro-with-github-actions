@@ -28,7 +28,22 @@ jobs:
           distribution: 'adopt'
 
     # シミュレータ向けにビルド
+      - name: Build iOS app for simulator
+        run: |
+          xcodebuild -project ios/SampleMaesto.xcodeproj \
+            -scheme SampleMaestro \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -derivedDataPath build
 
     # ビルド成果物から.appファイルを取り出してシミュレータにインストール
+      - name: Install app to simulator
+        run: |
+          APP_PATH=$(find build -name "*.app" | head -n 1)
+          xcrun simctl boot "iPhone 15"
+          xcrun simctl install booted "$APP_PATH"
 
     # Maestroのテストを実行
+      - name: Run Maestro tests
+        run: |
+          maestro test .maestro/Test.yaml
