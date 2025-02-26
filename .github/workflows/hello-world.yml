@@ -30,7 +30,8 @@ jobs:
     # シミュレータ向けにビルド
       - name: Build iOS app for simulator
         run: |
-          xcodebuild -project running-maestro-with-github-actions/SampleMaesto.xcodeproj \
+          xcodebuild \
+            -project SampleMaesto.xcodeproj \
             -scheme SampleMaestro \
             -configuration Debug \
             -sdk iphonesimulator \
