@@ -1,10 +1,10 @@
 name: Maestro Test Workflow
 
-# 1. Event
+# Event
 on:
   workflow_dispatch: # 手動実行
 
-# 2. Workflow
+# Workflow
 jobs:
   maestro_test: # job_1
     runs-on: macos-latest
@@ -30,7 +30,7 @@ jobs:
     # シミュレータ向けにビルド
       - name: Build iOS app for simulator
         run: |
-          xcodebuild -project ios/SampleMaesto.xcodeproj \
+          xcodebuild -project SampleMaestro/SampleMaesto.xcodeproj \
             -scheme SampleMaestro \
             -configuration Debug \
             -sdk iphonesimulator \
