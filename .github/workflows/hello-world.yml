@@ -11,6 +11,10 @@ jobs:
     timeout-minutes: 30
 
     steps:
+    # リポジトリのチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
     # Maestroのセットアップ
       - name: Install dependencies and Maestro
         run: |
@@ -33,15 +37,17 @@ jobs:
           xcodebuild \
             -project SampleMaestro.xcodeproj \
             -scheme SampleMaestro \
-            -destination OS=17.5,name="iPhone 15" \
-            -derivedDataPath ./build  \
+            -sdk iphonesimulator \
+            -destination "platform=iOS Simulator,name=iPhone 15" \
+            -derivedDataPath ./build \
             clean build
 
     # ビルド成果物から.appファイルを取り出してシミュレータにインストール
       - name: Install app to simulator
         run: |
-          APP_PATH=$(find build -name "*.app" | head -n 1)
-          xcrun simctl boot "iPhone 15"
+          APP_PATH=$(find ./build/Build/Products -name "*.app" | head -n 1)
+          echo "Found app at: $APP_PATH"
+          xcrun simctl boot "iPhone 15" || true
           xcrun simctl install booted "$APP_PATH"
 
     # Maestroのテストを実行
